@@ -1,18 +1,23 @@
-let personas = 0;
-let suma = 0;
-
-let edad = prompt("ingrese la edad de la persona, para salir ingrese X");
-
-while (edad != "X") {
-  if (edad == "X") {
-  } else if ((edad > 0) & (edad < 110)) {
-    personas++;
-    suma = suma + parseFloat(edad);
-  } else {
-    alert("Numero fuera de rango de edad ");
-  }
-  edad = prompt("ingrese la edad de la persona, para salir ingrese X");
+function promedioNotas() {
+  let nota = prompt("Ingrese las notas \n Para ver el resultado ingrese Y");
 }
 
-let promedio = suma / personas;
-alert("El promedio de edad es : " + promedio);
+do {
+  let opcion;
+  prompt(
+    "Ingrese la opcion de la operacion que desea realizar \n 1. Promedio de notas \n 2. Mayor de las notas \n 3. Menor de las notas \n X. Salir"
+  );
+  switch (opcion) {
+    case "1":
+      promedioNotas();
+      break;
+    case "2":
+      notaMayor();
+      break;
+    case "3":
+      notaMenor();
+      break;
+    case "X":
+      break;
+  }
+} while (opcion != "X");
