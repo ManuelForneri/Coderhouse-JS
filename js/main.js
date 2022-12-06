@@ -5,8 +5,13 @@ function promedioNotas() {
     "Ingrese las edades de las personas \n Para ver el resultado ingrese Y"
   );
   while (edad != "Y") {
-    suma = suma + parseFloat(edad);
-    alumnos++;
+    parseFloat(edad);
+    if (edad < 0 || edad > 120) {
+      alert("Fuera del rango de edad");
+    } else {
+      suma = suma + edad;
+      alumnos++;
+    }
     edad = prompt(
       "Ingrese las edades de las personas \n Para ver el resultado ingrese Y"
     );
@@ -19,7 +24,9 @@ function edadMayor() {
   let edad = prompt("Ingrese las edades: \n para ver el resultado ingrese Y ");
   while (edad != "Y") {
     parseFloat(edad);
-    if (edad > mayor) {
+    if (edad < 0 || edad > 120) {
+      alert("Fuera del rango de edad");
+    } else if (edad > mayor) {
       mayor = edad;
     }
     edad = prompt("Ingrese las edades: \n para ver el resultado ingrese Y ");
@@ -31,7 +38,9 @@ function edadMenor() {
   let edad = prompt("Ingrese las edades: \n para ver el resultado ingrese Y ");
   while (edad != "Y") {
     parseFloat(edad);
-    if (edad < menor) {
+    if (edad < 0 || edad > 120) {
+      alert("Fuera del rango de edad");
+    } else if (edad < menor) {
       menor = edad;
     }
     edad = prompt("Ingrese las edades: \n para ver el resultado ingrese Y ");
@@ -53,6 +62,9 @@ while (opcion != "X") {
       edadMenor();
       break;
     case "X":
+      break;
+    default:
+      alert("No se encontro la opcion que ingreso, vuelva a intentarlo");
       break;
   }
   opcion = prompt(
