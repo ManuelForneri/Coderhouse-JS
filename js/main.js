@@ -5,19 +5,19 @@ function promedioNotas() {
     "Ingrese las edades de las personas \n Para ver el resultado ingrese Y"
   );
   while (edad != "Y") {
-    parseFloat(edad);
+    edad = parseFloat(edad);
     if (edad < 0 || edad > 120) {
-      alert("Fuera del rango de edad");
+      alert("Edad fuera de rango, rango de edad de 0 a 120");
     } else {
       suma = suma + edad;
       alumnos++;
     }
+
     edad = prompt(
       "Ingrese las edades de las personas \n Para ver el resultado ingrese Y"
     );
   }
-  let promedio = suma / alumnos;
-  alert("El promedio de las edades es : " + promedio);
+  alert("Promedio de edad: " + suma / alumnos);
 }
 function edadMayor() {
   let mayor = -1;
