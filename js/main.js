@@ -1,65 +1,35 @@
-function promedioNotas() {
-  let suma = 0;
-  let alumnos = 0;
-  let edad = prompt(
-    "Ingrese las edades de las personas \n Para ver el resultado ingrese Y"
-  );
-  while (edad != "Y") {
-    edad = parseFloat(edad);
-    if (edad < 0 || edad > 120) {
-      alert("Edad fuera de rango, rango de edad de 0 a 120");
-    } else {
-      suma = suma + edad;
-      alumnos++;
-    }
+function serchProducto() {}
+function servicios() {}
 
-    edad = prompt(
-      "Ingrese las edades de las personas \n Para ver el resultado ingrese Y"
-    );
+const products = [];
+
+class Producto {
+  constructor(id, titulo, precio, marca, color) {
+    this.id = products.length + 1;
+    this.titulo = titulo;
+    this.precio = precio;
+    this.marca = marca;
+    this.color = color;
   }
-  alert("Promedio de edad: " + suma / alumnos);
 }
-function edadMayor() {
-  let mayor = -1;
-  let edad = prompt("Ingrese las edades: \n para ver el resultado ingrese Y ");
-  while (edad != "Y") {
-    parseFloat(edad);
-    if (edad < 0 || edad > 120) {
-      alert("Fuera del rango de edad");
-    } else if (edad > mayor) {
-      mayor = edad;
-    }
-    edad = prompt("Ingrese las edades: \n para ver el resultado ingrese Y ");
-  }
-  alert("La edad mas alta es: " + mayor);
-}
-function edadMenor() {
-  let menor = 99;
-  let edad = prompt("Ingrese las edades: \n para ver el resultado ingrese Y ");
-  while (edad != "Y") {
-    parseFloat(edad);
-    if (edad < 0 || edad > 120) {
-      alert("Fuera del rango de edad");
-    } else if (edad < menor) {
-      menor = edad;
-    }
-    edad = prompt("Ingrese las edades: \n para ver el resultado ingrese Y ");
-  }
-  alert("La edad mas baja es: " + menor);
-}
+
+products.push(new Producto("Reloj Caballero", "2000", "Lemon", "Negro"));
+products.push(new Producto("Reloj Dama", "2500", "Casio", "Rosa"));
+products.push(new Producto("Mate imperial", "5500", "MateCampo", "Negro"));
+products.push(new Producto("Mate imperial", "5300", "MateCampo", "Marron"));
+
 let opcion = prompt(
-  "Ingrese la opcion de la operacion que desea realizar \n 1. Promedio de edades \n 2. Mayor de las edades \n 3. Menor de las edades \n X. Salir"
+  "Ingrese la opcion \n 1. Ver productos \n 2. Mayor de las edades \n 3. Menor de las edades \n X. Salir"
 );
 while (opcion != "X") {
   switch (opcion) {
     case "1":
-      promedioNotas();
+      serchProducto();
       break;
     case "2":
-      edadMayor();
+      servicios();
       break;
     case "3":
-      edadMenor();
       break;
     case "X":
       break;
