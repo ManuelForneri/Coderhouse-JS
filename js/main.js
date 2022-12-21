@@ -1,10 +1,7 @@
-function serchProducto() {}
-function servicios() {}
-
 const products = [];
 
 class Producto {
-  constructor(id, titulo, precio, marca, color) {
+  constructor(titulo, precio, marca, color) {
     this.id = products.length + 1;
     this.titulo = titulo;
     this.precio = precio;
@@ -13,23 +10,30 @@ class Producto {
   }
 }
 
-products.push(new Producto("Reloj Caballero", "2000", "Lemon", "Negro"));
-products.push(new Producto("Reloj Dama", "2500", "Casio", "Rosa"));
-products.push(new Producto("Mate imperial", "5500", "MateCampo", "Negro"));
-products.push(new Producto("Mate imperial", "5300", "MateCampo", "Marron"));
+function addProducto() {
+  let titulo = prompt("Ingrese el titulo del producto");
+  let precio = prompt("Ingrese el precio del producto");
+  let marca = prompt("Ingrese la marca del producto");
+  let color = prompt("Ingrese el color del producto");
+  products.push(new Producto(titulo, precio, marca, color));
+  console.log(products);
+}
+function addServices() {}
+function viewAll() {}
 
 let opcion = prompt(
-  "Ingrese la opcion \n 1. Ver productos \n 2. Mayor de las edades \n 3. Menor de las edades \n X. Salir"
+  "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n 3. Ver todo \n X. Salir"
 );
 while (opcion != "X") {
   switch (opcion) {
     case "1":
-      serchProducto();
+      addProducto();
       break;
     case "2":
-      servicios();
+      addServices();
       break;
     case "3":
+      viewAll();
       break;
     case "X":
       break;
@@ -38,6 +42,6 @@ while (opcion != "X") {
       break;
   }
   opcion = prompt(
-    "Ingrese la opcion de la operacion que desea realizar \n 1. Promedio de edades \n 2. Mayor de las edades \n 3. Menor de las edades \n X. Salir"
+    "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n 3. Ver todo \n X. Salir"
   );
 }
