@@ -11,12 +11,12 @@ class Producto {
     this.color = color;
   }
 }
-products.push(new Producto("Reloj Caballero", "2000", "Lemon", "Negro"));
-products.push(new Producto("Reloj Dama", "2500", "Casio", "Rosa"));
-products.push(new Producto("Mate imperial", "5500", "MateCampo", "Negro"));
+products.push(new Producto("Reloj Caballero", 2000, "Lemon", "Negro"));
+products.push(new Producto("Reloj Dama", 2500, "Casio", "Rosa"));
+products.push(new Producto("Mate imperial", 5500, "MateCampo", "Negro"));
 
 // Se creo un constructor de objetos de servicios
-class Servicios {
+class Servicio {
   constructor(tipo, costo, descripcion) {
     this.id = services.length + 1;
     this.tipo = tipo;
@@ -24,14 +24,14 @@ class Servicios {
     this.descripcion = descripcion;
   }
 }
-products.push(
-  new Servicios("compostura", 2000, "todo tipo de composturas     ")
+services.push(
+  new Servicio("compostura", 2000, "todo tipo de composturas     ")
 );
-products.push(
-  new Servicios("Reparacion de joyas", 5000, "Reparacion de todo tipo de joyas")
+services.push(
+  new Servicio("Reparacion de joyas", 5000, "Reparacion de todo tipo de joyas")
 );
-products.push(
-  new Servicios(
+services.push(
+  new Servicio(
     "reparacion de relojes",
     6000,
     "Reparacion de todo tipo de relojes"
@@ -40,17 +40,32 @@ products.push(
 
 function addProducto() {
   let titulo = prompt("Ingrese el titulo del producto");
-  let precio = prompt("Ingrese el precio del producto");
+  let precio = parseFloat(prompt("Ingrese el precio del producto"));
+  while (isNaN(precio)) {
+    precio = parseFloat(
+      prompt("Error, eso no es un numero, intentelo otra vez :")
+    );
+  }
   let marca = prompt("Ingrese la marca del producto");
   let color = prompt("Ingrese el color del producto");
   products.push(new Producto(titulo, precio, marca, color));
-  console.log(products);
+  console.table(products);
 }
-function addServices() {}
-function viewAll() {}
+function addServices() {
+  let tipo = prompt("Ingrese el nombre del ervicio");
+  let precio = parseFloat(prompt("Ingrese el precio del Servicio"));
+  while (isNaN(precio)) {
+    precio = parseFloat(
+      prompt("Error, eso no es un numero, intentelo otra vez :")
+    );
+  }
+  let descripcion = prompt("Ingrese una descripcion del servicio");
+  services.push(new Servicio(tipo, precio, descripcion));
+  console.table(services);
+}
 
 let opcion = prompt(
-  "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n 3. Ver todo \n X. Salir"
+  "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n X. Salir"
 );
 while (opcion != "X") {
   switch (opcion) {
@@ -60,9 +75,6 @@ while (opcion != "X") {
     case "2":
       addServices();
       break;
-    case "3":
-      viewAll();
-      break;
     case "X":
       break;
     default:
@@ -70,6 +82,6 @@ while (opcion != "X") {
       break;
   }
   opcion = prompt(
-    "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n 3. Ver todo \n X. Salir"
+    "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n X. Salir"
   );
 }
