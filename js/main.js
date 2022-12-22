@@ -116,6 +116,6 @@ while (opcion != "X") {
       break;
   }
   opcion = prompt(
-    "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n 3 Buscar un producto \n 4. Buscar un servicio\n X. Salir"
+    "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n 3 Buscar un producto \n 4. Buscar un servicio\n X. Salir "
   );
 }
