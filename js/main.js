@@ -1,4 +1,6 @@
 const products = [];
+const services = [];
+// Se creo un constructor de objetos de productos
 
 class Producto {
   constructor(titulo, precio, marca, color) {
@@ -9,6 +11,32 @@ class Producto {
     this.color = color;
   }
 }
+products.push(new Producto("Reloj Caballero", "2000", "Lemon", "Negro"));
+products.push(new Producto("Reloj Dama", "2500", "Casio", "Rosa"));
+products.push(new Producto("Mate imperial", "5500", "MateCampo", "Negro"));
+
+// Se creo un constructor de objetos de servicios
+class Servicios {
+  constructor(tipo, costo, descripcion) {
+    this.id = services.length + 1;
+    this.tipo = tipo;
+    this.costo = costo;
+    this.descripcion = descripcion;
+  }
+}
+products.push(
+  new Servicios("compostura", 2000, "todo tipo de composturas     ")
+);
+products.push(
+  new Servicios("Reparacion de joyas", 5000, "Reparacion de todo tipo de joyas")
+);
+products.push(
+  new Servicios(
+    "reparacion de relojes",
+    6000,
+    "Reparacion de todo tipo de relojes"
+  )
+);
 
 function addProducto() {
   let titulo = prompt("Ingrese el titulo del producto");
