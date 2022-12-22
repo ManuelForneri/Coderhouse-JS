@@ -52,7 +52,7 @@ function addProducto() {
   console.table(products);
 }
 function addServices() {
-  let tipo = prompt("Ingrese el nombre del ervicio");
+  let tipo = prompt("Ingrese el nombre del servicio");
   let precio = parseFloat(prompt("Ingrese el precio del Servicio"));
   while (isNaN(precio)) {
     precio = parseFloat(
@@ -64,8 +64,36 @@ function addServices() {
   console.table(services);
 }
 
+function searchProduct(products) {
+  let busqueda = prompt("Ingrese un producto de nuestro catalogo ");
+  const resultadoBusqueda = products.find((el) => {
+    return el.titulo === busqueda;
+  });
+  if (resultadoBusqueda == undefined) {
+    alert(
+      "No se encontro ningun producto con ese nombre, por favor intentelo de nuevo"
+    );
+  } else {
+    console.log("Resultado de la busqueda");
+    console.table(resultadoBusqueda);
+  }
+}
+function searchService(services) {
+  let busquedaServicio = prompt("Ingrese un servicio de nuestro local");
+  const resultado = services.find((el) => {
+    return el.tipo === busquedaServicio;
+  });
+  if (resultado == undefined) {
+    alert(
+      "No se encontro ningun servicio con ese nombre, por favor intentelo de nuevo"
+    );
+  } else {
+    console.log("Resultado de la busqueda de servicios");
+    console.table(resultado);
+  }
+}
 let opcion = prompt(
-  "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n X. Salir"
+  "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n 3 Buscar un producto \n 4. Buscar un servicio\n X. Salir"
 );
 while (opcion != "X") {
   switch (opcion) {
@@ -75,6 +103,12 @@ while (opcion != "X") {
     case "2":
       addServices();
       break;
+    case "3":
+      searchProduct(products);
+      break;
+    case "4":
+      searchService(services);
+      break;
     case "X":
       break;
     default:
@@ -82,6 +116,6 @@ while (opcion != "X") {
       break;
   }
   opcion = prompt(
-    "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n X. Salir"
+    "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n 3 Buscar un producto \n 4. Buscar un servicio\n X. Salir"
   );
 }
