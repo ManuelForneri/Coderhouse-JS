@@ -67,9 +67,9 @@ function addServices() {
 function searchProduct(products) {
   let busqueda = prompt("Ingrese un producto de nuestro catalogo ");
   const resultadoBusqueda = products.find((el) => {
-    return el.titulo === busqueda;
+    return el.titulo.includes(busqueda);
   });
-  if (resultadoBusqueda == undefined) {
+  if (resultadoBusqueda == false) {
     alert(
       "No se encontro ningun producto con ese nombre, por favor intentelo de nuevo"
     );
