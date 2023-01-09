@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: auto;
+  background-color: #b7ac92;
+  padding: 20px;
+  margin-top: auto;
+  color: #fff;
+}
+.redes-container {
+  display: flex;
+  gap: 20px;
+}
+.redes-container div a {
+  color: #fff;
+  font-size: large;
+}

@@ -1,4 +1,4 @@
-const products = [];
+/* const products = [];
 const services = [];
 // Se creo un constructor de objetos de productos
 
@@ -119,3 +119,4 @@ while (opcion != "X") {
     "Ingrese la opcion \n 1. Agregar un producto \n 2. Agregar un Servicio \n 3 Buscar un producto \n 4. Buscar un servicio\n X. Salir "
   );
 }
+ */
