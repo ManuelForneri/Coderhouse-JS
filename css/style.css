@@ -53,6 +53,12 @@ header ul li a:hover {
   display: none;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-family: sans-serif;
+}
 .container-grid-products {
   display: grid;
   width: 100%;
@@ -82,12 +88,13 @@ header ul li a:hover {
   margin: 0 auto;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  color: #fff;
+  color: #000;
   font-size: 1em;
   transition: all 0.5s;
 }
 .btn-compra:hover {
-  background-color: #027373;
+  background-color: #fff;
+  width: 50%;
 }
 
 .imagenes {
