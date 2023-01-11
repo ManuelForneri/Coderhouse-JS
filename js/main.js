@@ -19,3 +19,10 @@ products.push(new Producto("Mountain bike Olmo Wish 290", 94499));
 products.push(new Producto("Bicicleta plegable Fire Bird R20", 85000));
 
 console.table(products);
+
+for (i = 0; i < products.length; i++) {
+  let titulos = document.getElementsByClassName("title-product");
+  let precio = document.getElementsByClassName("product-price");
+  titulos[i].innerText = products[i].titulo;
+  precio[i].innerText = "$" + products[i].precio;
+}

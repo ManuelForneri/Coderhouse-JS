@@ -76,7 +76,14 @@ header ul li a:hover {
   gap: 10px;
   justify-content: space-between;
 }
-
+.title-product {
+  color: #000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.product-price {
+  color: #000;
+  font-family: sans-serif;
+}
 .btn-compra {
   width: 100%;
   background-color: transparent;
@@ -110,16 +117,16 @@ header ul li a:hover {
   justify-content: center;
   gap: 20px;
   height: auto;
-  background-color: #9fc131;
+  background-color: #a9d9d0;
   padding: 20px;
   margin-top: auto;
-  color: #fff;
+  color: #000;
 }
 .redes-container {
   display: flex;
   gap: 20px;
 }
 .redes-container div a {
-  color: #fff;
+  color: #000;
   font-size: large;
 }
