@@ -131,6 +131,13 @@ header ul li a:hover {
   font-size: large;
 }
 
+.explicacion {
+  width: 50%;
+}
+.explicacion p {
+  color: #fff;
+}
+
 /* fade */
 @-webkit-keyframes fadeIn {
   from {

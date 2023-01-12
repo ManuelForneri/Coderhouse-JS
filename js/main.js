@@ -1,4 +1,5 @@
 const products = [];
+const shoppingCart = [];
 // Se creo un constructor de objetos de productos
 
 class Producto {
@@ -32,3 +33,11 @@ a = new Date();
 anio.innerText = a.getFullYear();
 
 localStorage.setItem("productos", JSON.stringify(products));
+
+function addShoppingCart(id) {
+  let prod = localStorage.getItem("productos", products);
+
+  shoppingCart.push(prod[id - 1]);
+  console.log(shoppingCart);
+  console.log(prod);
+}
