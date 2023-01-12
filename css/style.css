@@ -163,3 +163,13 @@ header ul li a:hover {
 }
 
 /* fin fade */
+
+@media (max-width: 768px) {
+  .container-grid-products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .product-card {
+    height: 90vh;
+    width: 100%;
+  }
+}
