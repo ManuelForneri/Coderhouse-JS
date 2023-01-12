@@ -36,8 +36,8 @@ localStorage.setItem("productos", JSON.stringify(products));
 
 function addShoppingCart(id) {
   let prod = localStorage.getItem("productos", products);
-
-  shoppingCart.push(prod[id - 1]);
-  console.log(shoppingCart);
-  console.log(prod);
+  let arr = [];
+  arr = JSON.parse(prod);
+  shoppingCart.push(arr[id - 1]);
+  localStorage.setItem("Carrito de Compras", JSON.stringify(shoppingCart));
 }
