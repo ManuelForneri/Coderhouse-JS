@@ -26,3 +26,9 @@ for (i = 0; i < products.length; i++) {
   titulos[i].innerText = products[i].titulo;
   precio[i].innerText = "$" + products[i].precio;
 }
+
+anio = document.getElementById("anio");
+a = new Date();
+anio.innerText = a.getFullYear();
+
+localStorage.setItem("productos", JSON.stringify(products));
