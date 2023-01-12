@@ -132,10 +132,15 @@ header ul li a:hover {
 }
 
 .explicacion {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .explicacion p {
   color: #fff;
+  width: 50%;
+  margin: 20px;
+  font-size: xx-large;
 }
 
 /* fade */
