@@ -40,4 +40,13 @@ function addShoppingCart(id) {
   arr = JSON.parse(prod);
   shoppingCart.push(arr[id - 1]);
   localStorage.setItem("Carrito de Compras", JSON.stringify(shoppingCart));
+
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "su producto se añadio al carrito",
+    showConfirmButton: false,
+    timer: 1500,
+    backdrop: false,
+  });
 }
