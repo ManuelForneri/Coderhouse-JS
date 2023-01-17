@@ -32,10 +32,10 @@ anio = document.getElementById("anio");
 a = new Date();
 anio.innerText = a.getFullYear();
 
-localStorage.setItem("productos", JSON.stringify(products));
+sessionStorage.setItem("productos", JSON.stringify(products));
 
 function addShoppingCart(id) {
-  let prod = localStorage.getItem("productos", products);
+  let prod = sessionStorage.getItem("productos", products);
   let arr = [];
   arr = JSON.parse(prod);
   shoppingCart.push(arr[id - 1]);
