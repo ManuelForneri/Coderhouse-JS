@@ -1,6 +1,8 @@
+/* Creando dos arreglos vacíos. */
 const products = [];
 const shoppingCart = [];
-// Se creo un constructor de objetos de productos
+
+/* Crea un nuevo objeto de producto con una identificación única, un título y un precio. */
 
 class Producto {
   constructor(titulo, precio) {
@@ -21,6 +23,10 @@ products.push(new Producto("Bicicleta plegable Fire Bird R20", 85000));
 
 console.table(products);
 
+/* Un bucle for que itera a través de la matriz de productos y establece el texto interno de los
+elementos con el nombre de clase "título-producto" en el título del producto y el texto interno de
+los elementos con el nombre de clase "precio-producto" en el precio del producto. */
+
 for (i = 0; i < products.length; i++) {
   let titulos = document.getElementsByClassName("title-product");
   let precio = document.getElementsByClassName("product-price");
@@ -28,10 +34,18 @@ for (i = 0; i < products.length; i++) {
   precio[i].innerText = "$" + products[i].precio;
 }
 
+/* Obtener el elemento con el id "anio" y establecer el texto interno en el año actual. */
 anio = document.getElementById("anio");
 a = new Date();
 anio.innerText = a.getFullYear();
 
+/**
+ * Toma la identificación del producto que desea agregar al carrito de compras, luego obtiene los
+ * productos del almacenamiento de la sesión, luego analiza los productos en una matriz, luego empuja
+ * el producto a la matriz del carrito de compras, luego establece el matriz de carrito de compras al
+ * almacenamiento local.
+ * @param id - la identificación del producto
+ */
 sessionStorage.setItem("productos", JSON.stringify(products));
 
 function addShoppingCart(id) {
