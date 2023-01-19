@@ -60,7 +60,7 @@ function addShoppingCart(id) {
     icon: "success",
     title: "su producto se añadio al carrito",
     showConfirmButton: false,
-    timer: 1500,
+    timer: 1501,
     backdrop: false,
   });
 }
