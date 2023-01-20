@@ -106,19 +106,15 @@ anio = document.getElementById("anio");
 a = new Date();
 anio.innerText = a.getFullYear();
 
-/**
- * Toma la identificación del producto que desea agregar al carrito de compras, luego obtiene los
- * productos del almacenamiento de la sesión, luego analiza los productos en una matriz, luego empuja
- * el producto a la matriz del carrito de compras, luego establece el matriz de carrito de compras al
- * almacenamiento local.
- * @param id - la identificación del producto
- */
 sessionStorage.setItem("productos", JSON.stringify(products));
 
 function addShoppingCart(id) {
   let prod = sessionStorage.getItem("productos", products);
   let arr = [];
   arr = JSON.parse(prod);
+  /*  if (shoppingCart.length === 0) {
+    let shop = JSON.parse(localStorage.getItem("Carrito de Compras"));
+  } */
   shoppingCart.push(arr[id - 1]);
   localStorage.setItem("Carrito de Compras", JSON.stringify(shoppingCart));
 
