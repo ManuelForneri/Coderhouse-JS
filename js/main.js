@@ -81,10 +81,7 @@ products.push(
 
 console.table(products);
 
-/* Un bucle for que itera a través de la matriz de productos y establece el texto interno de los
-elementos con el nombre de clase "título-producto" en el título del producto y el texto interno de
-los elementos con el nombre de clase "precio-producto" en el precio del producto. */
-
+/* Crear una nueva tarjeta para cada producto en la matriz de productos. */
 for (i = 0; i < products.length; i++) {
   let contenedorProductos = document.querySelector(".container-grid-products");
 
