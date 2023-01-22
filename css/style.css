@@ -196,4 +196,7 @@ header ul li a:hover {
   .imagenes {
     height: auto;
   }
+  .container-shoppingCart {
+    width: 98%;
+  }
 }
