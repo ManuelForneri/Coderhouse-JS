@@ -1,6 +1,5 @@
 /* Creando dos arreglos vacíos. */
 const products = [];
-const shoppingCart = [];
 
 /* Crea un nuevo objeto de producto con una identificación única, un título y un precio. */
 
@@ -110,14 +109,21 @@ sessionStorage.setItem("productos", JSON.stringify(products));
 
 function addShoppingCart(id) {
   let prod = sessionStorage.getItem("productos", products);
+  let shoppingCart = [];
   let arr = [];
+  let cart = JSON.parse(localStorage.getItem("Carrito de Compras"));
   arr = JSON.parse(prod);
-  /*  if (shoppingCart.length === 0) {
-    let shop = JSON.parse(localStorage.getItem("Carrito de Compras"));
-  } */
-  shoppingCart.push(arr[id - 1]);
-  localStorage.setItem("Carrito de Compras", JSON.stringify(shoppingCart));
 
+  if (cart === null) {
+    shoppingCart.push(arr[id - 1]);
+    localStorage.setItem("Carrito de Compras", JSON.stringify(shoppingCart));
+  } else {
+    cart.forEach((p) => {
+      shoppingCart.push(p);
+    });
+    shoppingCart.push(arr[id - 1]);
+    localStorage.setItem("Carrito de Compras", JSON.stringify(shoppingCart));
+  }
   Swal.fire({
     position: "top-end",
     icon: "success",
