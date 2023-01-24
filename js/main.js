@@ -73,7 +73,7 @@ products.push(
 products.push(
   new Producto(
     "Bicicleta Ghepard X 2.0 Mtb R29 Shimano Aluminio Slp Disco",
-    88.916,
+    88916,
     "../assets/BicicletaGhepardX2.0MtbR29.webp"
   )
 );

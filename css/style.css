@@ -103,6 +103,34 @@ header ul li a:hover {
   background-color: #fff;
   width: 50%;
 }
+.btn-vaciar {
+  width: 20%;
+
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 0, 0);
+  font-size: 1em;
+  transition: all 0.5s;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.btn-vaciar:hover {
+  background-color: #f00;
+  color: #fff;
+}
+.btn-eliminar {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  padding: 5px;
+}
 
 .imagenes {
   object-fit: cover;
@@ -126,11 +154,28 @@ header ul li a:hover {
   gap: 10px;
   justify-content: space-between;
 }
+.title-shop {
+  color: #000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: xx-large;
+}
+.product-price-shop {
+  color: #000;
+  font-family: sans-serif;
+  font-size: x-large;
+}
 .middle {
   display: flex;
   flex-direction: column;
   width: 50%;
   justify-content: space-around;
+  align-items: flex-end;
+}
+.total-price {
+  font-size: xx-large;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
 }
 .footer {
   display: flex;
