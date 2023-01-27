@@ -80,6 +80,7 @@ function comprar() {
 }
 
 function eliminarProducto(posicion) {
+  let new_shop = JSON.parse(localStorage.getItem("Carrito de Compras"));
   let newArr = [];
   Swal.fire({
     title: "Seguro que quiere eliminar el producto?",
@@ -98,10 +99,10 @@ function eliminarProducto(posicion) {
         "success"
       );
       contenedorCarrito.innerHTML = "";
-      for (i = 0; i < shop.length; i++) {
-        if (shop.length > 1) {
+      for (i = 0; i < new_shop.length; i++) {
+        if (new_shop.length > 1) {
           if (i != posicion) {
-            newArr.push(shop[i]);
+            newArr.push(new_shop[i]);
           }
         } else {
           if (i == posicion) {
