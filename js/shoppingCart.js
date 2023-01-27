@@ -79,6 +79,18 @@ function comprar() {
   });
 }
 
+/**
+ * Toma la posición del elemento en la matriz, luego crea una nueva matriz, luego verifica si la matriz
+ * tiene más de un elemento, si lo tiene, verifica si la posición del elemento no es la misma que la
+ * posición de el elemento en la matriz, si no lo está, empuja el elemento a la nueva matriz, si lo
+ * está, no hace nada, si la matriz tiene solo un elemento, verifica si la posición del elemento es la
+ * misma que la posición del elemento en la matriz, si lo está, establece la nueva matriz en una matriz
+ * vacía, si no lo está, no hace nada, luego establece la nueva matriz en el almacenamiento local,
+ * luego establece el total en 0, luego recorre la nueva matriz, luego agrega el precio del artículo al
+ * total, luego crea una nueva tarjeta de tienda, luego agrega la nueva tarjeta de tienda al
+ * contenedor, luego establece el total en el
+ * @param posicion - la posición del producto en la matriz
+ */
 function eliminarProducto(posicion) {
   let new_shop = JSON.parse(localStorage.getItem("Carrito de Compras"));
   let newArr = [];
