@@ -306,4 +306,13 @@ header ul li a:hover {
   .container-shoppingCart {
     width: 98%;
   }
+  .title {
+    font-size: 40px;
+  }
+  .title-containes {
+    height: 70vh;
+  }
+  .carrusel-container {
+    width: 100%;
+  }
 }
