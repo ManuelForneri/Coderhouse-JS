@@ -100,11 +100,6 @@ for (i = 0; i < products.length; i++) {
   contenedorProductos.innerHTML += newCard;
 }
 
-/* Obtener el elemento con el id "anio" y establecer el texto interno en el año actual. */
-anio = document.getElementById("anio");
-a = new Date();
-anio.innerText = a.getFullYear();
-
 sessionStorage.setItem("productos", JSON.stringify(products));
 
 function addShoppingCart(id) {

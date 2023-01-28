@@ -43,7 +43,11 @@ function vaciar() {
     confirmButtonText: "Aceptar",
   }).then((result) => {
     if (result.isConfirmed) {
-      Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      Swal.fire(
+        "Carrito vaciado ",
+        "Se eliminaron todos los productos correctamente",
+        "success"
+      );
       localStorage.clear();
       contenedorCarrito.innerHTML = "";
       total.innerText = "Total : $0";
