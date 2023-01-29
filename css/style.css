@@ -18,27 +18,6 @@ button a:hover {
   color: #000;
 }
 
-header {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  background-color: #a9d9d0;
-  height: 50px;
-}
-header ul {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  margin-right: 20px;
-}
-header ul li a {
-  color: #000;
-  opacity: 1;
-  text-decoration: none;
-  font-family: "Lato", sans-serif;
-  font-size: x-large;
-  position: relative;
-}
 header ul li a.activo::before,
 header ul li a:hover::before {
   opacity: 1;
@@ -246,18 +225,32 @@ header ul li a:hover {
   justify-content: center;
   gap: 20px;
   height: auto;
-  background-color: #a9d9d0;
+  background-color: #fff;
   padding: 20px;
   margin-top: auto;
   color: #000;
+  font-size: large;
 }
+
 .redes-container {
   display: flex;
   gap: 20px;
 }
 .redes-container div a {
   color: #000;
-  font-size: large;
+  font-size: xx-large;
+}
+.hover-instagram:hover {
+  transition: all 0.5s;
+  color: violet;
+}
+.hover-whatsapp:hover {
+  transition: all 0.5s;
+  color: palegreen;
+}
+.hover-linkedin:hover {
+  transition: all 0.5s;
+  color: steelblue;
 }
 
 /* fade */

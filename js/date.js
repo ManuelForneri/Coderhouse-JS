@@ -10,8 +10,7 @@ footer.innerHTML += `
       <div class="redes-container">
         <div>
           <a target="_blank" href="#" aria-label="Facebook"
-            ><i class="fa-brands fa-facebook-f hover-facebook redes"></i
-          ></a>
+            ><i class="fa-brands fa-linkedin hover-linkedin"></i></a>
         </div>
         <div>
           <a target="_blank" href="#" aria-label="instagram"
