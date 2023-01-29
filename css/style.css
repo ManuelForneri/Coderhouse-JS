@@ -17,6 +17,44 @@ button a {
 button a:hover {
   color: #000;
 }
+header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: #a9d9d0;
+  height: 50px;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin-right: 20px;
+}
+header ul li a {
+  color: #000;
+  opacity: 1;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: x-large;
+  position: relative;
+}
+header ul li a.activo::before,
+header ul li a:hover::before {
+  opacity: 1;
+}
+header ul li a::before {
+  content: "";
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  left: 0;
+  transition: 0.5s;
+  opacity: 0;
+}
+header ul li a:hover {
+  color: #fff;
+}
 
 header ul li a.activo::before,
 header ul li a:hover::before {
@@ -225,7 +263,7 @@ header ul li a:hover {
   justify-content: center;
   gap: 20px;
   height: auto;
-  background-color: #fff;
+  background-color: #a9d9d0;
   padding: 20px;
   margin-top: auto;
   color: #000;
@@ -307,5 +345,44 @@ header ul li a:hover {
   }
   .carrusel-container {
     width: 100%;
+  }
+  header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a9d9d0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0px;
+    position: absolute;
+    transition: max-height 0.3s ease;
+    width: 100%;
+    transition: all 0.9s;
+    padding-bottom: 15px;
+  }
+  header ul li {
+    opacity: 0;
+    transition: all 2s;
+  }
+  .btn-hamburguer {
+    display: flex;
+    margin-right: 1em;
+    background-color: transparent;
+    border: none;
+    font-size: 4vw;
+    position: absolute;
+    z-index: 1;
+    color: #000;
+    font-weight: bold;
+    z-index: 2;
+  }
+
+  .open-ul {
+    margin-top: 180px;
+    max-height: 300px;
+  }
+  .open-ul li {
+    opacity: 1;
   }
 }
