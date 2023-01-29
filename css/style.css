@@ -360,6 +360,7 @@ header ul li a:hover {
     width: 100%;
     transition: all 0.9s;
     padding-bottom: 15px;
+    z-index: 1;
   }
   header ul li {
     opacity: 0;
